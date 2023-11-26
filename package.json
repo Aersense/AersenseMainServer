@@ -1,0 +1,17 @@
+{
+  "name": "aersensemainserver",
+  "version": "1.0.0",
+  "description": "Aersense is a startup with a mission to Address pollution challanges in effecient way by offering various products and innovative solutions. This is the main server code base for the company.",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [
+    "aersense",
+    "pollution",
+    "health",
+    "wellbeing"
+  ],
+  "author": "Aersense",
+  "license": "ISC"
+}
