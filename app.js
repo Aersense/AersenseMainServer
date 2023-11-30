@@ -34,7 +34,7 @@ const User = require('./models/User.js');
 const updateIds = require('./controllers/updateIds.js')
 updateIds();    // This helps attain the oldUserId value in case of server restart
 
-// Passport.js for user authentication
+// Passport.js for user authentication [Do not remove]
 app.use(passport.initialize());
 app.use(passport.session());
 const passportSerialization = require('./config/passportSerialization.js');
