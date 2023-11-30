@@ -5,14 +5,13 @@ dotenv.config({ path: "./env/secrets.env" });
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-// const mongoose = require('mongoose');
 const passport = require('passport');
-// const localStrategy = require('passport-local').Strategy;
-// const bcrypt = require('bcrypt');
 const app = express();
 const PORT = process.env.PORT || 3000;
-let oldUserId = 1000000;
+let oldUserId = 1000000;    // Used this variable to retain the highest userid already given.
+// updateIds() function below uses this variable.
 
+//Connection for Database
 const connectToDB = require('./db/dbConnection.js');
 connectToDB();
 
@@ -35,14 +34,14 @@ const User = require('./models/User.js');
 const updateIds = require('./controllers/updateIds.js')
 updateIds();    // This helps attain the oldUserId value in case of server restart
 
-// Passport.js
+// Passport.js for user authentication
 app.use(passport.initialize());
 app.use(passport.session());
 const passportSerialization = require('./config/passportSerialization.js');
 const myLocalStrategy = require('./config/localStrategy.js');
 const { isLoggedIn, isLoggedOut } = require('./middleware/authMiddleware.js');
 
-
+//Routes
 const authRoutes = require('./routes/authRoutes.js');
 app.use(authRoutes);
 
