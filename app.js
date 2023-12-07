@@ -17,6 +17,7 @@ connectToDB();
 
 //Middleware
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/frontend'));
 app.use(session({
     secret: toString(process.env.MySecret),
     resave: false,
@@ -42,6 +43,8 @@ const myLocalStrategy = require('./config/localStrategy.js');
 const { isLoggedIn, isLoggedOut } = require('./middleware/authMiddleware.js');
 
 //Routes
+const mainRoutes = require('./routes/mainRoutes.js');
+app.use(mainRoutes);
 const authRoutes = require('./routes/authRoutes.js');
 app.use(authRoutes);
 
