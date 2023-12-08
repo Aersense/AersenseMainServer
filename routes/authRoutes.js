@@ -10,10 +10,6 @@ router.get("/notLoggedIn", function (req, res) {
     res.send("Failed to login.");
 });
 
-router.get("/", isLoggedIn, function (req, res) {
-    res.send(`Hello ${req.user.name}`);
-});
-
 router.get("/login", function (req, res) {
     res.send("Login Page");
 });

@@ -26,6 +26,7 @@ app.use(session({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(bodyParser.json());
+app.set('view engine', 'ejs');
 
 
 // Models
@@ -44,9 +45,9 @@ const { isLoggedIn, isLoggedOut } = require('./middleware/authMiddleware.js');
 
 //Routes
 const mainRoutes = require('./routes/mainRoutes.js');
-app.use(mainRoutes);
+app.use("/", mainRoutes);
 const authRoutes = require('./routes/authRoutes.js');
-app.use(authRoutes);
+app.use("/", authRoutes);
 
 // Server listening
 app.listen(PORT, function () {
