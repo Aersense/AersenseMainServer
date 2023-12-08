@@ -15,8 +15,8 @@
                 <li><a href="/">HOME</a></li>
                 <li><a href="/">OUR TEAM</a></li>
                 <li><a href="/register">JOIN US</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/about">ABOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -37,23 +37,32 @@
                 <li>Behind-the-Scenes Sneak Peeks</li>
             </ul>
 
-            <form id="joinForm" target="_blank" action="join.php" method="post">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form id="joinForm" action="/register" method="post">
+                <label for="name">Name:</label>
+                <input name="name" type="text" id="name" required>
 
-                <label for="age">Your Age:</label>
-                <input type="number" id="age" name="age" required>
+                <label for="age">Age:</label>
+                <input name="age" type="number" id="age" required>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="country">Country:</label>
+                <input name="country" type="text" id="country" required>
 
-                <label for="mobile">Your Mobile Number:</label>
-                <input type="tel" id="mobile" name="mobile" required>
+                <label for="city">City:</label>
+                <input name="city" type="text" id="city" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input name="mobile" type="tel" id="mobile" required>
+
+                <label for="emailId">Email:</label>
+                <input name="emailId" type="email" id="email" required>
+
+                <label for="password">Password:</label>
+                <input name="password" type="password" id="password" required>
 
                 <button type="submit" id="joinButton">Join Now</button>
             </form>
 
-            <p>Your privacy is essential to us. We ensure your data is safe and secure. <a href="privacy.html">Check our
+            <p>Your privacy is essential to us. We ensure your data is safe and secure. <a href="/">Check our
                     Privacy Policy</a>.</p>
 
             <p>Stay connected with us on social media:</p>
@@ -65,7 +74,7 @@
                 <a href="#" target="_blank"><img src="./image_forweb/instagram-icon.png" alt="Instagram"></a>
             </div>
 
-            <p>Any questions or ideas? <a href="contact.html">Contact us</a>.</p>
+            <p>Any questions or ideas? <a href="/contact">Contact us</a>.</p>
         </section>
     </main>
 
@@ -76,18 +85,6 @@
             <p>Email: prithvi07raj07@gmail.com</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('joinForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Display a simple thank you message
-            const thankYouMessage = 'Thank you for being part of our journey!';
-            alert(thankYouMessage);
-
-
-        });
-    </script>
 </body>
 
 </html>
