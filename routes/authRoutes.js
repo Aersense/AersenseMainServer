@@ -11,7 +11,7 @@ router.get("/notLoggedIn", function (req, res) {
 });
 
 router.get("/login", function (req, res) {
-    res.send("Login Page");
+    res.render("login", { loginStatus: req.query.loginStatus });
 });
 
 router.get('/logout', function (req, res) {
@@ -20,8 +20,8 @@ router.get('/logout', function (req, res) {
 });
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/notLoggedIn'
+    successRedirect: '/userHome',
+    failureRedirect: '/login?loginStatus=FailedToLogin'
 }));
 
 router.post('/register', async (req, res) => {

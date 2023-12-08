@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | AERSENSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Welcome to AERSENSE</h1>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">OUR TEAM</a></li>
+                <li><a href="/register">JOIN US</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/about">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="join-us">
+            <h2>Be Part of Our Journey!</h2>
+            <p>Hey there! Ready to dive into the exciting world of innovation? Join our vibrant community at Your
+                Company
+                Name, where passion meets technology.</p>
+
+            <div class="errorWarning">
+                <% if(loginStatus==="FailedToLogin" ) { %>
+                    <h3>
+                        Invalid login credentials, Please try again</h3>
+                    <% } %>
+            </div>
+
+            <form id="joinForm" action="/login" method="post">
+
+                <label for="emailId">Email:</label>
+                <input name="emailId" type="email" id="email" required>
+
+                <label for="password">Password:</label>
+                <input name="password" type="password" id="password" required>
+                <p>If you don't have an account <a href="/register">Click Here</a></p>
+                <button type="submit" id="joinButton">Login</button>
+            </form>
+
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            <p>gt, Phagwara, India</p>
+            <p>Email: prithvi07raj07@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
