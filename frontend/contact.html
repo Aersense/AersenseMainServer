@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aersense</title>
+    <link rel="Stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+</head>
+<body>
+<!--Header-->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="./image_forweb/logo.png" alt="logo"></a>
+            <div class="nav-link" id="navlink">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">OUR TEAM</a></li>
+                    <li><a href="join.html">JOIN US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                    
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+
+<!--Contact Us-->
+
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6821.446171082868!2d75.70472507164891!3d31.25608827637243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1698181127168!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>Grand Trunk Rd, Phagwara, 144001</h5>
+                    <p>Jalandhar,Punjab</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>+917505258527</h5>
+                    <p>Monday to saturday, 10Am to 6Pm</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-envelop"></i>
+                <span>
+                    <h5>prithvi07@gmail.com</h5>
+                    <p>Email Us Your Query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="form-handler.php" method="post">
+                <input type="text" name="Name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter Email address" required>
+                <input type="text" name="Subject" placeholder="Enter your Subject" required>
+                <textarea rows="8" name="Message"  placeholder="Message" required></textarea>
+                <button type="Submit" class="hero-btn red-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<!---Footer-->
+<section class="footer">
+    <h2>About Us</h2>
+    <p>AirSense's love for clean air and smart tech sparks a healthy dance party!</p>
+    <p>Made With love from Prithvi Raj</p>
+</section>
+
+<!---Javascript for toggle menu responsive----> 
+    <script>
+        var navlink = document.getElementById("navlink");
+        function showmenu(){
+            navlink.style.right="0";
+        }
+        function hidemenu(){
+            navlink.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

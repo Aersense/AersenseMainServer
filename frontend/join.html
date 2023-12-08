@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Join Us | AERSENSE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to AERSENSE</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html">OUR TEAM</a></li>
+        <li><a href="join.html">JOIN US</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="About.html">ABOUT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="join-us">
+      <h2>Be Part of Our Journey!</h2>
+      <p>Hey there! Ready to dive into the exciting world of innovation? Join our vibrant community at Your Company
+        Name, where passion meets technology.</p>
+
+      <h3>Benefits of Joining:</h3>
+      <ul>
+        <li>Access to Exclusive Insights</li>
+        <li>Early Notifications on Innovations</li>
+        <li>Special Offers and Discounts</li>
+        <li>Engaging Tech Discussions</li>
+        <li>Behind-the-Scenes Sneak Peeks</li>
+      </ul>
+
+      <form id="joinForm" target="_blank" action="join.php" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile">Your Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+
+        <button type="submit" id="joinButton">Join Now</button>
+      </form>
+
+      <p>Your privacy is essential to us. We ensure your data is safe and secure. <a href="privacy.html">Check our
+          Privacy Policy</a>.</p>
+
+      <p>Stay connected with us on social media:</p>
+      <div class="social-icons">
+        <!-- Add social media icons/links here -->
+
+        <a href="#" target="_blank"><img src="./image_forweb/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="./image_forweb/twitter-icon.png" alt="Twitter"></a>
+        <a href="#" target="_blank"><img src="./image_forweb/instagram-icon.png" alt="Instagram"></a>
+      </div>
+
+      <p>Any questions or ideas? <a href="contact.html">Contact us</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+      <p>gt, Phagwara, India</p>
+      <p>Email: prithvi07raj07@gmail.com</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('joinForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Display a simple thank you message
+      const thankYouMessage = 'Thank you for being part of our journey!';
+      alert(thankYouMessage);
+
+
+    });
+  </script>
+</body>
+
+</html>

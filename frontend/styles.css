@@ -1,0 +1,201 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5B6E6A;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #22222A;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #FFFFFF;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #5B6E6A;
+    /* Background color for the main section */
+}
+
+.join-us {
+    background-color: #DBDADA;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 40px;
+    /* Increased margin bottom for the Join Us section */
+}
+
+.join-us p:last-child {
+    margin-bottom: 30px;
+    /* Adjusted margin for the last paragraph in Join Us section */
+}
+
+.join-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.join-us p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.join-us ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.join-us ul li {
+    margin-bottom: 10px;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.join-us p a {
+    text-decoration: none;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #242424;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Added transition for transform */
+    margin-bottom: 10px;
+}
+
+form button:hover {
+    background-color: #333;
+    transform: scale(1.1);
+    /* Increase the button size on hover */
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Footer styles */
+.site-footer {
+    background-color: #22222A;
+    /* Footer background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 5px;
+}
+
+/* ... (Previous CSS styles remain unchanged) ... */
+
+form input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ... (Remaining CSS styles remain unchanged) ... */
+
+
+.join-us p:last-child {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* Adjusted margin for the last paragraph in Join Us section */
+}
