@@ -5,6 +5,7 @@ const { isLoggedIn, isLoggedOut } = require('./../middleware/authMiddleware.js')
 const passport = require('passport');
 const User = require('./../models/User.js');
 const bcrypt = require('bcrypt');
+const sendWelcomeMail = require('./../controllers/welcomeEmail.js');
 
 router.get("/notLoggedIn", function (req, res) {
     res.send("Failed to login.");
@@ -25,6 +26,11 @@ router.post('/login', passport.authenticate('local', {
 }));
 
 router.post('/register', async (req, res) => {
+    let lastUser = await User.findOne({}).sort({ field: 'asc', _id: -1 }).limit(1);
+    if (lastUser)
+        var oldUserId = lastUser.userId;
+    else
+        var oldUserId = 1000000;
     const exists = await User.exists({ emailId: req.body.emailId });
 
     if (exists) {
@@ -49,7 +55,7 @@ router.post('/register', async (req, res) => {
                 devices: []
             });
             newUser.save();
-
+            sendWelcomeMail(newUser);
             res.send("Registered Successfully");
         });
     });

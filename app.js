@@ -7,13 +7,15 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const app = express();
+const nodemailer = require("nodemailer");
 const PORT = process.env.PORT || 3000;
-let oldUserId = 1000000;    // Used this variable to retain the highest userid already given.
-// updateIds() function below uses this variable.
 
 //Connection for Database
 const connectToDB = require('./db/dbConnection.js');
 connectToDB();
+
+//Mailer initialisation
+const transporter = require('./controllers/nodemailerInitializer.js');
 
 //Middleware
 app.use(express.static(__dirname + '/public'));
@@ -31,10 +33,6 @@ app.set('view engine', 'ejs');
 
 // Models
 const User = require('./models/User.js');
-
-// Updation of Id's for data integrity in case of server restart
-const updateIds = require('./controllers/updateIds.js')
-updateIds();    // This helps attain the oldUserId value in case of server restart
 
 // Passport.js for user authentication [Do not remove]
 app.use(passport.initialize());
